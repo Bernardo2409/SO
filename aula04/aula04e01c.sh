@@ -1,3 +1,9 @@
 #!/bin/bash
-. /path/to/functions #atenção ao espaço.
-source /path/to/functions
+
+. ./functions.sh
+
+echo "Primeira função"
+imprime_msg
+
+echo "Segunda função"
+imprimir_msg
