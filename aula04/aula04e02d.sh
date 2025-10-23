@@ -1,26 +1,27 @@
 #!/bin/bash
-function comparar() 
-{
-echo -e -n "\n Diz dois números: " 
-read a b
-if [[ $a -eq $b ]]; then
-    return 0
-else 
-    if [[ $a -gt $b ]]; then
-        return $a
-    else 
-        return $b
+
+comparar() {
+    if [[ $1 -eq $2 ]]; then
+        return 0        
+    elif [[ $1 -gt $2 ]]; then
+        return 1        
+    else
+        return 2        
     fi
-fi
 }
 
-# Chama a função e captura o valor de retorno
-comparar
+if [[ $# -ne 2 ]]; then
+    echo "Uso: $0 <num1> <num2>"
+    exit 1
+fi
+
+comparar "$1" "$2"
 resultado=$?
 
-# Verifica o valor de retorno
 if [[ $resultado -eq 0 ]]; then
-    echo "Os números são iguais"
+    echo "Os números são iguais."
+elif [[ $resultado -eq 1 ]]; then
+    echo "O maior número é $1."
 else
-    echo "O maior número é $resultado"
+    echo "O maior número é $2."
 fi
