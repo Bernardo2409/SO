@@ -22,7 +22,7 @@
 /** \brief internal storage size of <em>FIFO memory</em> */
 #define  M         2
 
-/**
+/** 
  *  \brief Definition of <em>FIFO memory</em> data type.
  */
 typedef struct
