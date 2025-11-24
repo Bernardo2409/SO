@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall
 
-progs = ex5 ex7
+progs = ex5 ex7 ex9 ex11 ex15 ex18
 objs = $(progs:%=%.o)
 
 .PHONY:     all clean cleanall
